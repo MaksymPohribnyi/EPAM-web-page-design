@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechConf 2026 Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <h1>DOU Day Conf 2026</h1>
+    </header>
+
+    <main class="container">
+        <section class="form-wrapper">
+            <h2>Registration Form</h2>
+            <p>Join us for the biggest tech event of the year.</p>
+
+            <form id="registrationForm" class="registration-form" novalidate>
+
+                <fieldset class="form-group">
+                    <legend>Personal Information</legend>
+
+                    <div class="input-wrapper">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" class="form-input" required
+                            placeholder="John Doe">
+                        <span class="error-msg" id="nameError"></span>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" required
+                            placeholder="john@example.com">
+                        <span class="error-msg" id="emailError"></span>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <legend>Event Details</legend>
+
+                    <div class="input-wrapper">
+                        <label for="tshirt">T-Shirt Size</label>
+                        <select id="tshirt" name="tshirt" class="form-input">
+                            <option value="s">Small</option>
+                            <option value="m">Medium</option>
+                            <option value="l">Large</option>
+                            <option value="xl">X-Large</option>
+                        </select>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label>Ticket Type</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="ticket" value="20" checked class="ticket-selector">
+                                Standard Pass ($20)
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="ticket" value="50" class="ticket-selector">
+                                VIP Pass ($50)
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="summary-section">
+                    <h3>Total Cost: $<span id="totalCost">50</span></h3>
+                </div>
+
+                <button type="submit" class="submit-btn">Register Now</button>
+
+            </form>
+
+            <div id="successMessage" class="success-message hidden">
+                Registration Successful! See you there.
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
